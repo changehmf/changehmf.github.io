@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Java,算法,排序算法," />
 
 
 
@@ -79,16 +79,20 @@
 
 
 
-<meta name="description" content="无所求则无所获。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Autumn Night&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="1. 算法的特征 有穷性：算法的每个步骤都能在有限时间内完成 确定性：在每种情况下所应执行的操作，在算法中都有确切的规定，使算法的执行者或阅读者都能明确其含义及如何执行。并且在任何条件下，算法都只有一条执行路径。 可行性：算法中的所有操作都必须足够基本，都可以通过已经实现的基本操作运算有限次实现之。 有输入：作为算法加工对象的量值，通常体现在算法当中的一组变量。有些输入量需要在算法执行的过程中输">
+<meta name="keywords" content="Java,算法,排序算法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="排序算法（一）">
+<meta property="og:url" content="http://yoursite.com/2018/03/26/常用排序算法/index.html">
 <meta property="og:site_name" content="Autumn Night&#39;s Blog">
-<meta property="og:description" content="无所求则无所获。">
+<meta property="og:description" content="1. 算法的特征 有穷性：算法的每个步骤都能在有限时间内完成 确定性：在每种情况下所应执行的操作，在算法中都有确切的规定，使算法的执行者或阅读者都能明确其含义及如何执行。并且在任何条件下，算法都只有一条执行路径。 可行性：算法中的所有操作都必须足够基本，都可以通过已经实现的基本操作运算有限次实现之。 有输入：作为算法加工对象的量值，通常体现在算法当中的一组变量。有些输入量需要在算法执行的过程中输">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://static.leiphone.com/uploads/new/article/740_740/201706/5940f239851db.jpg?imageMogr2/format/jpg/quality/90">
+<meta property="og:updated_time" content="2018-03-26T05:50:01.511Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Autumn Night&#39;s Blog">
-<meta name="twitter:description" content="无所求则无所获。">
+<meta name="twitter:title" content="排序算法（一）">
+<meta name="twitter:description" content="1. 算法的特征 有穷性：算法的每个步骤都能在有限时间内完成 确定性：在每种情况下所应执行的操作，在算法中都有确切的规定，使算法的执行者或阅读者都能明确其含义及如何执行。并且在任何条件下，算法都只有一条执行路径。 可行性：算法中的所有操作都必须足够基本，都可以通过已经实现的基本操作运算有限次实现之。 有输入：作为算法加工对象的量值，通常体现在算法当中的一组变量。有些输入量需要在算法执行的过程中输">
+<meta name="twitter:image" content="https://static.leiphone.com/uploads/new/article/740_740/201706/5940f239851db.jpg?imageMogr2/format/jpg/quality/90">
 
 
 
@@ -118,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/03/26/常用排序算法/"/>
 
 
 
 
 
-  <title>Autumn Night's Blog</title>
+  <title>排序算法（一） | Autumn Night's Blog</title>
   
 
 
@@ -143,8 +147,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -247,9 +250,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -279,9 +282,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/26/常用排序算法/" itemprop="url">排序算法（一）</a></h1>
+          <h1 class="post-title" itemprop="name headline">排序算法（一）</h1>
         
 
         <div class="post-meta">
@@ -364,8 +365,7 @@
       
 
       
-        
-          <p><img src="https://static.leiphone.com/uploads/new/article/740_740/201706/5940f239851db.jpg?imageMogr2/format/jpg/quality/90" alt="image"></p>
+        <p><img src="https://static.leiphone.com/uploads/new/article/740_740/201706/5940f239851db.jpg?imageMogr2/format/jpg/quality/90" alt="image"></p>
 <h4 id="1-算法的特征"><a href="#1-算法的特征" class="headerlink" title="1. 算法的特征"></a>1. 算法的特征</h4><ul>
 <li>有穷性：算法的每个步骤都能在有限时间内完成</li>
 <li>确定性：在每种情况下所应执行的操作，在算法中都有确切的规定，使算法的执行者或阅读者都能明确其含义及如何执行。并且在任何条件下，算法都只有一条执行路径。</li>
@@ -379,192 +379,35 @@
 <li>健壮性</li>
 <li>高效率与低存储</li>
 </ol>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/03/26/常用排序算法/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/26/Java设计模式-观察者模式/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="秋枫夜">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Autumn Night's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/26/Java设计模式-观察者模式/" itemprop="url">Java设计模式-观察者模式</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-26T09:23:41+08:00">
-                2018-03-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java设计模式/" itemprop="url" rel="index">
-                    <span itemprop="name">Java设计模式</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2018/03/26/Java设计模式-观察者模式/" class="leancloud_visitors" data-flag-title="Java设计模式-观察者模式">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h3 id="一、观察者模式定义"><a href="#一、观察者模式定义" class="headerlink" title="一、观察者模式定义"></a>一、观察者模式定义</h3><ol>
-<li><p>在阎宏博士的《JAVA与模式》一书中开头是这样描述观察者（Observer）模式的：<br><br><strong>观察者模式是对象的行为模式，又叫发布-订阅(Publish/Subscribe)模式、模型-视图(Model/View)模式、源-监听器(Source/Listener)模式或从属者(Dependents)模式。</strong></p>
-</li>
-<li><p>定义　　<br><br>观察者模式定义了一种一对多的依赖关系，让多个观察者对象同时监听某一个主题对象。这个主题对象在状态上发生变化时，会通知所有观察者对象，使它们能够自动更新自己。</p>
-</li>
-<li><p>特点</p>
-<ul>
-<li>被观察者需要持有一个或者多个被观察者对象</li>
-<li>系统中某一个模块发生变化，某些模块也会发生改变</li>
+<a id="more"></a> 
+<h4 id="3-常用排序算法"><a href="#3-常用排序算法" class="headerlink" title="3.常用排序算法"></a>3.常用排序算法</h4><h5 id="1-冒泡排序"><a href="#1-冒泡排序" class="headerlink" title="1.冒泡排序"></a>1.冒泡排序</h5><ul>
+<li>比较相邻的元素，第一个比第二个大，交换两个的位置</li>
+<li>对每一对相邻的元素作同样的工作，从开始第一队到结尾最后一对，最后元素最大的会到末尾</li>
+<li>重复上述步骤</li>
+<li>直到没有比较元素</li>
 </ul>
-</li>
-<li><p>UML<br><img src="https://upload-images.jianshu.io/upload_images/5596129-bab34ca441dfee82.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700" alt="image"></p>
-</li>
-<li><p>观察者模式涉及到的角色</p>
-<ul>
-<li><strong>抽象被观察者角色</strong>：定义了动态增加、删除及通知观察者对象的方法，职责就是管理和通知观察者。持有观察者对象的集合</li>
-<li><strong>具体被观察者</strong>：一般继承抽象观察者，实现自己本身的业务逻辑，当状态发生改变是发起通知。</li>
-<li><strong>抽象观察者角色</strong>：提供一个接口，定义了观察者收到通知更新自己的方法</li>
-<li><strong>具体观察者角色</strong>：实现抽象观察者接口，处理不同具体观察者的不同逻辑</li>
-</ul>
-</li>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">        int[] arr = &#123;8, 4, 3, 2, 9, 7, 4, 6, 2&#125;;</span><br><span class="line">        System.out.print(&quot;原数组：&quot;);</span><br><span class="line">        display(arr);</span><br><span class="line">        System.out.println(&quot;***************************&quot;);</span><br><span class="line">        moSort(arr);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 冒泡排序</span><br><span class="line">     *</span><br><span class="line">     * @param array</span><br><span class="line">     */</span><br><span class="line">    public static int[] moSort(int[] array) &#123;</span><br><span class="line">        for (int i = 1; i &lt; array.length; i++) &#123;</span><br><span class="line">            boolean flag = true;</span><br><span class="line">            for (int j = 0; j &lt; array.length - i; j++) &#123;</span><br><span class="line">                if (array[j] &gt; array[j + 1]) &#123;</span><br><span class="line">                    int temp = array[j];</span><br><span class="line">                    array[j] = array[j + 1];</span><br><span class="line">                    array[j + 1] = temp;</span><br><span class="line">                    flag = false;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            if (flag) &#123;</span><br><span class="line">                break;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            System.out.print(&quot;第&quot; + i + &quot;轮排序后的结果为:&quot;);</span><br><span class="line">            display(array);</span><br><span class="line">        &#125;</span><br><span class="line">        return array;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void display(int[] arry) &#123;</span><br><span class="line">        for (int i = 0; i &lt; arry.length; i++) &#123;</span><br><span class="line">            System.out.print(arry[i] + &quot; &quot;);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println();</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h5 id="2-选择排序"><a href="#2-选择排序" class="headerlink" title="2.选择排序"></a>2.选择排序</h5><ol>
+<li>从待排序序列中，找到关键字最小的元素</li>
+<li>如果最小元素不是待排序的第一个元素，将其和第一个元素互换</li>
+<li>从余下的N-1个元素中，找出最小的元素，重复1,2</li>
+<li>选择排序和冒泡排序执行了相同次数比较 N*(N-1)/2,至多进行N次交换</li>
+<li>当N值很大时，比较次数是主要的，由于选择排序交换次数少，所以比冒泡排序快。</li>
 </ol>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/03/26/Java设计模式-观察者模式/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line">    * 选择排序</span><br><span class="line">    *</span><br><span class="line">    * @param arr</span><br><span class="line">    * @return</span><br><span class="line">    */</span><br><span class="line">   public static  int[] choiceSort(int[] arr) &#123;</span><br><span class="line">       //总共需要N-1轮比较</span><br><span class="line">       for (int i = 0; i &lt; arr.length - 1; i++) &#123;</span><br><span class="line">           int min = i;</span><br><span class="line">           //每轮需要比较的次数</span><br><span class="line">           for (int j = i + 1; j &lt; arr.length; j++) &#123;</span><br><span class="line">               if (arr[j] &lt; arr[min]) &#123;</span><br><span class="line">                   //记录目前能找到最小值元素下标</span><br><span class="line">                   min = j;</span><br><span class="line">               &#125;</span><br><span class="line"></span><br><span class="line">               if (i != min) &#123;</span><br><span class="line">                   int temp = arr[i];</span><br><span class="line">                   arr[i] = arr[min];</span><br><span class="line">                   arr[min] = temp;</span><br><span class="line">               &#125;</span><br><span class="line">           &#125;</span><br><span class="line"></span><br><span class="line">           System.out.print(&quot;第&quot; + i + &quot;轮排序后的结果为:&quot;);</span><br><span class="line">           display(arr);</span><br><span class="line">       &#125;</span><br><span class="line"></span><br><span class="line">       return arr;</span><br><span class="line"></span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<h5 id="3-插入排序"><a href="#3-插入排序" class="headerlink" title="3.插入排序"></a>3.插入排序</h5><ol>
+<li>每一步都将待排序的元素插入到前面已经排序好的序列中</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line">   * 插入排序</span><br><span class="line">   * @param arr</span><br><span class="line">   */</span><br><span class="line">  public static int[] InsertSort(int[] arr)&#123;</span><br><span class="line">      int j;</span><br><span class="line">      //从下标为1的元素开始选择合适的位置插入，因为下标为0的只有一个元素，默认是有序的</span><br><span class="line">      for (int i = 1; i &lt;arr.length ; i++) &#123;</span><br><span class="line">          //记录要插入的数据</span><br><span class="line">          int temp = arr[i];</span><br><span class="line">          j = i;</span><br><span class="line">          //从已经排序的序列最右边开始比较，找到比其小的数</span><br><span class="line">          while(j&gt;0 &amp;&amp; temp&lt;arr[j-1])&#123;</span><br><span class="line">              //向后挪动</span><br><span class="line">              arr[j] = arr[j-1];</span><br><span class="line">              j--;</span><br><span class="line">          &#125;</span><br><span class="line">          //存在比起晓得数插入</span><br><span class="line">          arr[j] = temp;</span><br><span class="line"></span><br><span class="line">          System.out.print(&quot;第&quot; + i + &quot;轮排序后的结果为:&quot;);</span><br><span class="line">          display(arr);</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      return arr;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<h4 id="4-总结"><a href="#4-总结" class="headerlink" title="4.总结"></a>4.总结</h4><ul>
+<li><p>上面讲的三种排序，冒泡、选择、插入用大 O 表示法都需要 O(N2) 时间级别。一般不会选择冒泡排序，虽然冒泡排序书写是最简单的，但是平均性能是没有选择排序和插入排序好的。</p>
+</li>
+<li><p>选择排序把交换次数降低到最低，但是比较次数还是挺大的。当数据量小，并且交换数据相对于比较数据更加耗时的情况下，可以应用选择排序。</p>
+</li>
+<li><p>在大多数情况下，假设数据量比较小或基本有序时，插入排序是三种算法中最好的选择。</p>
+</li>
+</ul>
+
       
     </div>
     
@@ -579,167 +422,40 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/23/Github-Pages搭建遇到的问题/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="秋枫夜">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Autumn Night's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/23/Github-Pages搭建遇到的问题/" itemprop="url">Github Pages搭建遇到的问题</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-23T17:45:39+08:00">
-                2018-03-23
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/问题/" itemprop="url" rel="index">
-                    <span itemprop="name">问题</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/Java/" rel="tag"># Java</a>
           
-
+            <a href="/tags/算法/" rel="tag"># 算法</a>
           
-            
+            <a href="/tags/排序算法/" rel="tag"># 排序算法</a>
           
-
-          
-          
-             <span id="/2018/03/23/Github-Pages搭建遇到的问题/" class="leancloud_visitors" data-flag-title="Github Pages搭建遇到的问题">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h4 id="1-hexo-d-上传不了GitHub"><a href="#1-hexo-d-上传不了GitHub" class="headerlink" title="1.hexo -d 上传不了GitHub"></a>1.hexo -d 上传不了GitHub</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">修改配置文件：根目录下的_config.yml，修改deploy节点。原来的配置为：</span><br><span class="line">deploy:  </span><br><span class="line">    type: git   </span><br><span class="line">    repo: https://github.com/&#123;yourname&#125;/&#123;yourname&#125;.github.io.git   </span><br><span class="line">    branch: master</span><br><span class="line">修改为如下：</span><br><span class="line">deploy:    </span><br><span class="line">    type: git   </span><br><span class="line">    repo: https://&#123;yourname&#125;:&#123;yourpassword&#125;@github.com/&#123;yourname&#125;/&#123;yourname&#125;.github.io.git   </span><br><span class="line">    branch: master</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
       
 
       
       
-        <div class="post-eof"></div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/03/26/Java设计模式-观察者模式/" rel="next" title="Java设计模式-观察者模式">
+                <i class="fa fa-chevron-left"></i> Java设计模式-观察者模式
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
       
     </footer>
   </div>
@@ -749,10 +465,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -760,6 +477,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -780,8 +501,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -861,6 +591,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-算法的特征"><span class="nav-number">1.</span> <span class="nav-text">1. 算法的特征</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-算法的设计原则"><span class="nav-number">2.</span> <span class="nav-text">2.算法的设计原则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-常用排序算法"><span class="nav-number">3.</span> <span class="nav-text">3.常用排序算法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-冒泡排序"><span class="nav-number">3.1.</span> <span class="nav-text">1.冒泡排序</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-选择排序"><span class="nav-number">3.2.</span> <span class="nav-text">2.选择排序</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-插入排序"><span class="nav-number">3.3.</span> <span class="nav-text">3.插入排序</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-总结"><span class="nav-number">4.</span> <span class="nav-text">4.总结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1001,6 +747,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
